@@ -73,7 +73,9 @@ app.use("/", users)
 app.listen(8080,()=>{
     console.log("app listening")
 })
-
+app.get("/",(req,res)=>{
+    res.render("home.ejs")
+})
 
 
 // error handling

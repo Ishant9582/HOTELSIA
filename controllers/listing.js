@@ -1,7 +1,4 @@
 const Listing = require("../models/listing.js");
-module.exports.home = (req, res) => {
-    res.render("home.ejs")
-};
 
 // show all listing
 module.exports.show = async (req, res) => {
