@@ -39,7 +39,6 @@ async function main() {
 }
 
 const sessionOptions = {
-    store ,
     secret : "yoursecretkey" , 
     // AGR NICHE VALE 2 USE NHI KIE TO WARNING AAYEGI
     resave : "false" , 
