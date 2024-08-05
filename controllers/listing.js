@@ -23,7 +23,6 @@ module.exports.new = async (req, res, next) => {
     a.image = { url, filename };
     a.owner.push(req.user._id);
     a.owner.push('66b05d06aaf7732cabd73873')
-    
     a.owner.push('66afe3b1da64cc49e3ec1aa9')
     await a.save();
     req.flash("success", "new listing created successfully")
