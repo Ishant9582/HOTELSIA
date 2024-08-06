@@ -1,12 +1,9 @@
 <% layout('/layouts/boilerplate') -%>
 
     <body>
-        <div class="bg-black bg-opacity-50">   
-        <div >
+        <div class="main">
             <div class=" flex flex-row justify-center gap-5 flex-wrap">
-
                 <div class="cardddd max-w-sm    rounded-lg ">
-
                     <img class="rounded-t-lg imgggg hh" src="<%= all.image.url %>" alt="nt" />
 
                     <div class="p-5">
@@ -33,7 +30,7 @@
 
                     </div>
                     
-                        <a class="aa" href="/listings/<%= all.id %>/edit"><button
+                        <a class="aa" href="http://localhost:8080/listings/<%= all.id %>/edit"><button
                             class="btn btn-outline btn-accent">Edit</button></a>
                     &nbsp;
                     <form class="aa" action="/listings/<%= all._id %>?_method=delete" method="post">
@@ -111,13 +108,12 @@
                     <hr>
 
                 </div>
-            </div> 
-    
-    <h2 class="text-2xl font-semibold mb-4 ">All Reviews</h2>
-    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 ">
+            </div>    
+    <h2 class="text-2xl font-semibold mb-4">All Reviews</h2>
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         <!-- Review Card -->
         <% for(review of all.reviews){ %>
-        <div class=" p-4 rounded-lg shadow">
+        <div class="bg-white p-4 rounded-lg shadow">
             <p><b>Given By : @<%= review.author.username %></b></p>
            
           
@@ -131,8 +127,9 @@
             </form>
         </div>
         <% } %>
-    </div>
+
     </div>
     </div>
 </div>
 </body>
+
