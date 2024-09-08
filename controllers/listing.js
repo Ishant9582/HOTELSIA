@@ -16,17 +16,18 @@ module.exports.rendernew = (req, res) => {
 // for posting new form
 module.exports.new = async (req, res, next) => {
     let url = req.file.path;
-    let filename = req.file.filename;
+    let filename = req.file.filename ;
     //console.log(url , "...." , filename)
+    console.log(req.body.Listing)
     let a = new Listing(req.body.Listing);
     //console.log(req.user._id)
     a.image = { url, filename };
     a.owner.push(req.user._id);
     a.owner.push('66b05d06aaf7732cabd73873')
     a.owner.push('66afe3b1da64cc49e3ec1aa9')
-    await a.save();
-    req.flash("success", "new listing created successfully")
-    res.redirect("/listings");
+    await a.save() ;
+    req.flash("success", "new listing created successfully") ;
+    res.redirect("/listings") ;
 }
 
 // for showing particular
