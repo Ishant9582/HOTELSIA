@@ -1,13 +1,11 @@
 const Listing = require("../models/listing.js");
-
 // show all listing
 module.exports.show = async (req, res) => {
     const all = await Listing.find({});
     // console.log(all)
     //console.log(req.user)
-    res.render("index.ejs", { all });
+    res.render("showall.ejs", { all });
 }
-
 //render new adding form
 module.exports.rendernew = (req, res) => {
     res.render("new.ejs");

@@ -41,7 +41,7 @@ module.exports.isowner = async (req, res, next) => {
         //console.log(res.locals.userdata._id)
         // console.log(b)
         //console.log(res.locals.userdata._id) 
-        if (b.equals(res.locals.userdata._id)) {
+        if (b.equals(res.locals.userdata._id)){
             c++ ;
             break
             //console.log(c)
